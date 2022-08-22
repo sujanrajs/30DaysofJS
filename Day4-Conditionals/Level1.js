@@ -14,7 +14,7 @@ if (weather === "rainy") {
 // switch case
 
 let w = "cloudy";
-switch (weather) {
+switch (w) {
   case "rainy":
     console.log("Wear a rain coat");
     break;
