@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "firstName": "Sujan",
+      "lastName": "Shrestha",
+      "gender": "Male",
+      "phone": "123",
+      "email": "sujan@example.com"
+    },
+    {
+      "firstName": "Raj",
+      "lastName": "Pradhan",
+      "gender": "Male",
+      "phone": "456",
+      "email": "raj@example.com"
+    },
+    {
+      "firstName": "Janina",
+      "lastName": "Pradhan",
+      "gender": "Female",
+      "phone": 789,
+      "email": "janina@example.com"
+    }
+  ]
+}
