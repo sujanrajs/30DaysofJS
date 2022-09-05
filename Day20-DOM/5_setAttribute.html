@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document Object Model</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <p class="paragraph">
+      Adding attribute using setAttribute
+      <br />
+      <br />
+      The setAttribute() method set any html attribute. It takes two parameters
+      the type of the attribute and the name of the attribute. Let's add class
+      and id attribute for the fourth title.
+      <br />
+      <br />
+    </p>
+    <h1 class="title" id="first-title">First Title</h1>
+    <h1 class="title" id="second-title">Second Title</h1>
+    <h1 class="title" id="third-title">Third Title</h1>
+  </body>
+  <script>
+    document
+      .getElementById("third-title")
+      .setAttribute("class", "new-third-title"); // makes the third title bg color red
+
+    document
+      .getElementById("first-title")
+      .setAttribute("id", "new-first-title"); // this makes the first title bg blue
+    /* 
+    Adding attribute without setAttribute
+    We can use normal object setting method to set an attribute but this can not work for all elements.
+    Some attributes are DOM object property and they can be set directly.
+    For instance id and class
+
+    const titles = document.querySelectorAll('h1')
+    titles[3].className = 'title'
+    titles[3].id = 'new-title'
+    */
+  </script>
+</html>

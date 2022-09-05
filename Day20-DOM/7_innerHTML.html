@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document Object Model</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <p class="paragraph">
+      Adding Text to HTML element
+      <br />
+      <br />
+      An HTML is a build block of an opening tag, a closing tag and a text
+      content. We can add a text content using the property textContent or
+      *innerHTML.
+      <br />
+      <br />
+      Adding Text content using textContent
+      <br />
+      <br />
+      The textContent property is used to add text to an HTML element.
+      <br />
+      <br />
+      Adding Text Content using innerHTML
+      <br />
+      <br />
+      Most people get confused between textContent and innerHTML. textContent is
+      meant to add text to an HTML element, however innerHTML can add a text or
+      HTML element or elements as a child.
+      <br />
+      <br />
+      Inner HTML
+      <br />
+      <br />
+      We use innerHTML property when we like to replace or a completely new
+      children content to a parent element. It value we assign is going to be a
+      string of HTML elements.
+      <br />
+      <br />
+    </p>
+    <h1 class="title" id="first-title">First Title</h1>
+    <h1 class="title" id="second-title">Second Title</h1>
+    <h1 class="title" id="third-title">Third Title</h1>
+    <p class="inner-html" id="inner-html">For Inner HTML</p>
+    <ul class="newList">
+      <li>Hello</li>
+      <li>Hello2</li>
+      <li>Hello3</li>
+    </ul>
+  </body>
+  <script>
+    // textContent property is used to add text to an HTML element.
+    document.getElementById("first-title").textContent = " New First Title"; // first title is changed
+
+    document.getElementById("inner-html").innerHTML =
+      "This is changed using inner HTML";
+
+    const list = `<li>this is new list</li>
+    <li>second list</li>`;
+    document.getElementById("inner-html").innerHTML = list;
+
+    document.querySelector("ul").innerHTML = " "; // this removes all the ul
+  </script>
+</html>

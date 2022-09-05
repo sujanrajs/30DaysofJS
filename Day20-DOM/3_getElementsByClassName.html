@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document Object Model</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <p class="paragraph">
+      Getting elements by class name
+      <br />
+      <br />
+      getElementsByClassName() method returns an HTMLCollection object. An
+      HTMLCollection is an array like list of HTML elements. The length property
+      provides the size of the collection. It is possible to loop through all
+      the HTMLCollection elements.
+      <br />
+      <br />
+      document.getElementsByClassName('classname')
+    </p>
+    <h1 class="title" id="first-title">First Title</h1>
+    <h1 class="title" id="second-title">Second Title</h1>
+    <h1 class="title" id="third-title">Third Title</h1>
+    <h1></h1>
+  </body>
+  <script>
+    const allTitles = document.getElementsByClassName("title");
+
+    console.log(allTitles); // HTMLCollections
+    console.log(allTitles.length); // 4
+
+    for (let i = 0; i < allTitles.length; i++) {
+      console.log(allTitles[i]); // prints each elements in the HTMLCollection
+    }
+  </script>
+</html>

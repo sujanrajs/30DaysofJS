@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document Object Model</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <p class="paragraph">
+      Adding style
+      <br />
+      <br />
+      As you have notice, the properties of css when we use it in JavaScript is
+      going to be a camelCase. The following CSS properties change from
+      background-color to backgroundColor, font-size to fontSize, font-family to
+      fontFamily, margin-bottom to marginBottom.
+      <br />
+      <br />
+      getElementById or any attributes ().style.properties = "";
+      <br />
+      <br />
+    </p>
+    <h1 class="title" id="first-title">First Title</h1>
+    <h1 class="title" id="second-title">Second Title</h1>
+    <h1 class="title" id="third-title">Third Title</h1>
+  </body>
+  <script>
+    const titles = document.querySelectorAll("h1");
+    titles.forEach((title, i) => {
+      title.style.fontSize = "100px"; // all titles will have 100px font size
+      if (i % 2 === 0) {
+        title.style.color = "green";
+      } else {
+        title.style.color = "red";
+      }
+    });
+
+    // Adding style bg color
+    document.getElementById("second-title").style.backgroundColor = "pink";
+  </script>
+</html>

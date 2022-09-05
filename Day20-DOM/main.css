@@ -1,0 +1,21 @@
+body {
+  width: 1080px;
+  margin: 0 auto;
+  background-color: #ffca4e;
+  color: #393325;
+  align-self: center;
+}
+.paragraph {
+  font-size: 25px;
+}
+
+.new-third-title {
+  background-color: red;
+}
+#new-first-title {
+  background-color: aqua;
+}
+
+.new-class {
+  background-color: green;
+}

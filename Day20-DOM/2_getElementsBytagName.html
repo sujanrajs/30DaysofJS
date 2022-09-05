@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document Object Model</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <script>
+      const allTitles = document.getElementsByTagName("h1");
+
+      console.log(allTitles); // HTMLCollections
+      console.log(allTitles.length); // 4
+
+      for (let i = 0; i < allTitles.length; i++) {
+        console.log(allTitles[i]); // prints each elements in the HTMLCollection
+      }
+    </script>
+    <p class="paragraph">
+      Getting elements by tag name getElementsByTagName():
+      <br />
+      <br />
+      takes a tag name as a string parameter and this method returns an
+      HTMLCollection object. An HTMLCollection is an array like object of HTML
+      elements. The length property provides the size of the collection.
+      Whenever we use this method we access the individual elements using index
+      or after loop through each individual items. An HTMLCollection does not
+      support all array methods therefore we should use regular for loop instead
+      of forEach.
+      <br />
+      <br />
+      document.getElementsByTagName('tagname')
+    </p>
+    <h1 class="title" id="first-title">First Title</h1>
+    <h1 class="title" id="second-title">Second Title</h1>
+    <h1 class="title" id="third-title">Third Title</h1>
+    <h1></h1>
+  </body>
+</html>

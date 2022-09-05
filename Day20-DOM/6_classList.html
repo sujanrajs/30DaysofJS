@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document Object Model</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <p class="paragraph">
+      Adding class using classList
+      <br />
+      <br />
+      The class list method is a good method to append additional class. It does
+      not override the original class if a class exists rather it adds
+      additional class for the element.
+      <br />
+      <br />
+      Removing class using remove.
+      <br />
+      <br />
+      Similar to adding we can also remove class from an element. We can remove
+      a specific class from an element.
+      <br />
+      <br />
+    </p>
+    <h1 class="title" id="first-title">First Title</h1>
+    <h1 class="title" id="second-title">Second Title</h1>
+    <h1 class="title" id="third-title">Third Title</h1>
+  </body>
+  <script>
+    //another way to setting an attribute: append the class, doesn't over ride
+    document.getElementById("third-title").classList.add("new-class"); // bg will be green
+    document.getElementById("second-title").classList.add("new-class"); // adds new class in second title
+    document.getElementById("second-title").classList.remove("new-class"); // removes new class from second title
+  </script>
+</html>
