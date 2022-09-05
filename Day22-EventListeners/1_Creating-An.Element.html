@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document Object Model</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <h1>Event Listners</h1>
+    <p>
+      Common HTML events:onclick, onchange, onmouseover, onmouseout, onkeydown,
+      onkeyup, onload. We can add event listener method to any DOM object. We
+      use addEventListener() method to listen different event types on HTML
+      elements. The addEventListener() method takes two arguments, an event
+      listener and a callback function.
+    </p>
+    <pre>
+  selectedElement.addEventListener('eventlistner', function(e) {
+  // the activity you want to occur after the event will be in here
+  })
+
+  or
+
+  selectedElement.addEventListener('eventlistner', e => {
+  // the activity you want to occur after the event will be in here
+  })
+
+  <h2>Click</h2>
+  
+  To attach an event listener to an element,
+  first we select the element then we attach the addEventListener method.
+  The event listener takes event type and callback functions as argument.
+    </pre>
+    <button id="btn">Click Me</button>
+
+    <button onclick="hellofun()">Click Me</button>
+    <p id="helloworld"></p>
+    <p>
+      An event can be also attached directly to the HTML element as inline
+      script.
+    </p>
+    <button id="btn2" onclick="clickMe()">Click Me No.2</button>
+    <pre>
+      <h2>Double Click</h2>
+  To attach an event listener to an element, first we select the element then
+  we attach the addEventListener method. The event listener takes event type
+  and callback functions as argument.
+    </pre>
+    <button id="btn3" ondblclick="dblclick()">Click Me Double Click</button>
+    <h3>Mouse enter</h3>
+    <p>
+      To attach an event listener to an element, first we select the element
+      then we attach the addEventListener method. The event listener takes event
+      type and callback functions as argument.
+    </p>
+    <h3 id="demo" onmouseenter="mouseEnter()" onmouseleave="mouseLeave()">
+      Mouse over me
+    </h3>
+    <pre>
+      <h2>other Event listners</h2>
+click - when the element clicked
+dblclick - when the element double clicked
+mouseenter - when the mouse point enter to the element
+mouseleave - when the mouse pointer leave the element
+mousemove - when the mouse pointer move on the element
+mouseover - when the mouse pointer move on the element
+mouseout -when the mouse pointer out from the element
+input -when value enter to input field
+change -when value change on input field
+blur -when the element is not focused
+keydown - when a key is down
+keyup - when a key is up
+keypress - when we press any key
+onload - when the browser has finished loading a page
+    </pre>
+    <script>
+      const button = document.getElementById("btn");
+      button.addEventListener("click", (e) => {
+        console.log("e gives the event listener object:", e);
+        console.log("e.target gives the selected element: ", e.target);
+        console.log(
+          "e.target.textContent gives content of selected element: ",
+          e.target.textContent
+        );
+      });
+
+      const hellofun = () => {
+        document.getElementById("helloworld").innerHTML = "Hello World";
+      };
+
+      const clickMe = () => {
+        alert("We can attach event on HTML element");
+      };
+
+      const dblclick = () => {
+        alert("This is double click button");
+      };
+
+      function mouseEnter() {
+        document.getElementById("demo").style.color = "red";
+      }
+
+      function mouseLeave() {
+        document.getElementById("demo").style.fontSize = "50px";
+      }
+    </script>
+  </body>
+</html>
