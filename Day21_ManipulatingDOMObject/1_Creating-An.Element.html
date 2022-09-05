@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document Object Model</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <h4>
+      To create an HTML element we use tag name. Creating an HTML element using
+      JavaScript is very simple and straight forward. We use the method
+      document.createElement(). The method takes an HTML element tag name as a
+      string parameter.
+    </h4>
+    <p>document.createElement('tagname')</p>
+    <h4>Appending child to a parent element</h4>
+    <p>
+      To see a created element on the HTML document we should append it to the
+      parent as a child element. We can access the HTML document body using
+      document.body. The document.body support the appendChild() method.
+    </p>
+    <h4>Removing a child element from a parent node</h4>
+    <p>
+      After creating an HTML, we may want to remove element or elements and we
+      can use the removeChild() method.
+    </p>
+    <h1>Removing child Node</h1>
+    <h2>HTML DOM MANIPULATION</h1>
+    <ul id="list">
+        <li>1st 30DaysOfPython Challenge Done</li>
+        <li>2nd 30DaysOfJavaScript Challenge Done</li>
+        <li>30DaysOfReact Challenge Coming</li>
+        <li>30DaysOfFullStack Challenge Coming</li>
+        <li>30DaysOfDataAnalysis Challenge Coming</li>
+        <li>30DaysOfReactNative Challenge Coming</li>
+        </ul>
+    <script>
+      let title = document.createElement("h1");
+      title.className = "title";
+      title.style.fontSize = "30px";
+      title.textContent = "Creating HTML element DOM";
+      console.log(title);
+      document.body.append(title); // this appends the element into the html body
+
+      /* 
+      To create multiple elements we should use loop.
+      Using loop we can create as many HTML elements as we want.
+      After we create the element we can assign value to the different properties of the HTML object.
+      */
+      let newtitle;
+      for (let i = 0; i < 3; i++) {
+        newtitle = document.createElement("h2");
+        newtitle.className = "newtitle";
+        newtitle.style.fontSize = "24px";
+        newtitle.textContent = i;
+        console.log(newtitle);
+        document.body.append(newtitle.textContent='first');
+        document.body.append(newtitle.textContent='Second');
+        document.body.append(newtitle.textContent='Third');
+      }
+      const lists = document.getElementById('list');
+      lists.removeChild(lists.firstElementChild);
+
+    </script>
+  </body>
+</html>
