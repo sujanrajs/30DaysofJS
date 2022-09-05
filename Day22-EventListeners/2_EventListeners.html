@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document Object Model</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <h3>Getting value from an input element</h3>
+
+    <p>
+      We usually fill forms and forms accept data. Form fields are created using
+      input HTML element. Let us build a small application which allow us to
+      calculate body mas index of a person using two input fields, one button
+      and one p tag.
+    </p>
+
+    <input
+      class="input"
+      type="number"
+      id="mass"
+      placeholder="Mass in Kg"
+      oninput="inputfun()"
+    />
+    <input
+      class="input"
+      type="number"
+      id="height"
+      placeholder="Height in meters"
+      oninput="inputfun()"
+    />
+    <button id="btn" onclick="bmiClick()">Calculate BMI</button>
+
+    <h3>input event and change</h3>
+    <p>
+      In the above example, we managed to get input values from two input fields
+      by clicking button. How about if we want to get value without click the
+      button. We can use the change or input event type to get data right away
+      from the input field when the field is on focus.
+    </p>
+    <h4>Input and bmi results will be shown below</h4>
+    <h4 id="demo">Mass:</h4>
+    <h4 id="demo2">Height:</h4>
+    <h4 id="demo3">BMI:</h4>
+    <h3>keypress, keydow and keyup</h3>
+    <p>
+      We can access all the key numbers of the keyboard using different event
+      listener types. Let us use keypress and get the keyCode of each keyboard
+      keys.
+    </p>
+    <input type="text" class="input2" onkeypress="keypressfun()" />
+
+    <script>
+      const mass = document.getElementById("mass");
+      const height = document.getElementById("height");
+      const button = document.getElementById("btn");
+
+      function bmiClick() {
+        let bmi = mass.value / height.value ** 2;
+        alert(`your bmi is ${bmi.toFixed(2)}`);
+        console.log(bmi);
+        document.getElementById("demo3").innerHTML = "BMI: " + bmi.toFixed(2);
+      }
+      const inputfun = () => {
+        const getMass = mass.value;
+        const getHeight = height.value;
+        document.getElementById("demo").innerHTML = "Mass: " + getMass;
+        document.getElementById("demo2").innerHTML = "Height: " + getHeight;
+      };
+
+      function keypressfun() {
+        alert("You pressed a key inside the input field");
+      }
+    </script>
+  </body>
+</html>
