@@ -1,0 +1,27 @@
+body {
+  width: 1100px;
+  margin: 0 auto;
+  background-color: #ffca4e;
+  color: #393325;
+  align-self: center;
+  font-size: 1.5rem;
+}
+#btn {
+  font-size: 2rem;
+}
+
+#btn2 {
+  font-size: 3rem;
+}
+
+#btn3 {
+  font-size: 3rem;
+}
+
+.input {
+  font-size: 2rem;
+}
+
+.input2 {
+  font-size: 2rem;
+}
