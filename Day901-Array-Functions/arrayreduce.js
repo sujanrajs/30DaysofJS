@@ -43,6 +43,7 @@ console.log("TOTAL HEIGHT:", totalHeight);
 
 // Get total number of users by eye color
 const byEyeColor = users.reduce((acc, cur) => {
+  // repeated [cur.eye_color] can be assigned to one constant as: color = cur.eye_color
   if (acc[cur.eye_color]) {
     acc[cur.eye_color] = acc[cur.eye_color] + 1;
   } else {
