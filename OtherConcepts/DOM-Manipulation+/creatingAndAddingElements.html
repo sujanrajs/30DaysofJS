@@ -13,10 +13,22 @@
       const h1 = document.createElement("h1");
       body.append(div);
       body.append(h1);
+
       // The elements are empty so it can not be visible on browser but inside elements inside HTML
       // .append()
       //This method is used to add an element in form of a Node object or
       //a DOMString (basically means text). Here's how that would work.
+
+      body.append("Hello World", " using append");
+      // body.appendChild("Hello World", " using appendChild"); // creates error
+      // Uncaught TypeError: Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'.
+      // appendChild only appends elements like div or span or anchor, etc
+      // but append includes elements also strings
+      const p = document.createElement("p");
+      // p.innerText = "using innerText";
+      p.textContent = "using textContent";
+
+      body.append(p);
 
       // Inserting a Node object
       const parent1 = document.createElement("div");

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <span>Hello</span>
+      <span style="display: none">World</span>
+    </div>
+    <script>
+      const body = document.body;
+      const div = document.createElement("div");
+
+      //div.innerText = "Hello World inside div";
+      div.textContent = "Hello World inside div from textContent";
+
+      //body.append(div);
+
+      const divPrint = document.querySelector("div");
+      console.log(divPrint.textContent);
+      // textContext prints like in HTML file
+      /*
+        Hello
+        World
+      */
+      console.log(divPrint.innerText);
+      // innerText prints normal text Hello
+      // Also it prints only Hello not World because it is hidden in browser in body
+    </script>
+  </body>
+</html>
