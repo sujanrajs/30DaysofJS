@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <span id="hello">Hello</span>
+      <span id="world">World</span>
+    </div>
+    <script>
+      const body = document.body;
+      const div = document.querySelector("div");
+      const helloSpan = document.getElementById("hello"); // one way
+      const worldSpan = document.querySelector("#world"); // another way but parent element must be imported
+
+      helloSpan.remove(); // removes
+      div.append(helloSpan); // recover back
+      div.removeChild(worldSpan); // another way to remove
+    </script>
+  </body>
+</html>
