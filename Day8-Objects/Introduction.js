@@ -359,3 +359,16 @@ console.log("--------------");
 
 console.log(copyperson2.hasOwnProperty("name")); // false
 console.log(copyperson2.hasOwnProperty("address")); // true
+
+// Any JavaScript object can be converted to an array using Object.values():
+
+console.log("------Object.vavlues--------");
+
+const Per = {
+  name: "John",
+  age: 30,
+  city: "New York",
+};
+
+const objval = Object.values(Per);
+console.log(objval);

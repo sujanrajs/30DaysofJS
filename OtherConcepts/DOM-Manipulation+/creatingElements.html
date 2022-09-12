@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const body = document.body;
+      const div = document.createElement("div");
+      const h1 = document.createElement("h1");
+      body.append(div);
+      body.append(h1);
+      // The elements are empty so it can not be visible on browser but inside elements inside HTML
+      // .append()
+      //This method is used to add an element in form of a Node object or
+      //a DOMString (basically means text). Here's how that would work.
+
+      // Inserting a Node object
+      const parent1 = document.createElement("div");
+      const child1 = document.createElement("p");
+      parent.append(child1);
+      // This appends the child element to the div element
+      // The div would then look like this <div><p></p></div>
+
+      // Inserting a DOMString
+      const parent2 = document.createElement("div");
+      parent2.append("Appending Text");
+      // The div would then look like this <div>Appending Text</div>
+
+      //.appendChild()
+
+      //Similar to the .append method, this method is used to elements in the DOM,
+      //but in this case, only accepts a Node object.
+
+      // Inserting a Node object
+      const parent3 = document.createElement("div");
+      const child3 = document.createElement("p");
+      parent3.appendChild(child3);
+      // This appends the child element to the div element
+      // The div would then look like this <div><p></p></div>
+
+      // Inserting a DOMString
+      const parent4 = document.createElement("div");
+      parent4.appendChild("Appending Text");
+      // Uncaught TypeError: Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'
+
+      // Differences
+
+      //.append accepts Node objects and DOMStrings while .appendChild accepts only Node objects
+
+      const parent5 = document.createElement("div");
+      const child5 = document.createElement("p");
+      // Appending Node Objects
+      parent5.append(child5); // Works fine
+      parent5.appendChild(child5); // Works fine
+      // Appending DOMStrings
+      parent5.append("Hello world"); // Works fine
+      parent5.appendChild("Hello world"); // Throws error
+
+      // .append does not have a return value while .appendChild returns the appended Node object
+
+      const parent6 = document.createElement("div");
+      const child6 = document.createElement("p");
+      const appendValue = parent6.append(child6);
+      console.log(appendValue); // undefined
+      const appendChildValue = parent.appendChild(child6);
+      console.log(appendChildValue); // <p><p>
+
+      // .append allows you to add multiple items while appendChild allows only a single item
+
+      const parent7 = document.createElement("div");
+      const child7 = document.createElement("p");
+      const childTwo = document.createElement("p");
+      parent7.append(child7, childTwo, "Hello world"); // Works fine
+      parent7.appendChild(child7, childTwo, "Hello world");
+      // Works fine, but adds the first element and ignores the rest
+
+      // Conclusion:
+      // In cases where you can use .appendChild, you can use .append but not vice versa.
+    </script>
+  </body>
+</html>
+
+<!-- 
+
+
+ -->
