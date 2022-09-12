@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <span id="hello" data-test="this is a test" data-name="this is data name"
+        >Hello</span
+      >
+      <span id="world">World</span>
+    </div>
+    <script>
+      const body = document.body;
+      const helloSpan = document.getElementById("hello");
+
+      console.log(helloSpan.dataset); // DOMStringMap {test: 'this is a test', name: 'this is data name'}
+      console.log(helloSpan.dataset.test); // this is a test
+
+      // set property
+      helloSpan.dataset.newName = "new name";
+    </script>
+  </body>
+</html>
