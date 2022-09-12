@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <span title="hello-title" id="hello">Hello</span>
+      <span id="world">World</span>
+    </div>
+    <script>
+      const body = document.body;
+      const helloSpan = document.getElementById("hello");
+
+      console.log(helloSpan.getAttribute("id")); // hello
+      console.log(helloSpan.title); // hello-title -this is another way
+
+      // changes title to new-hello-title
+      helloSpan.setAttribute("title", "new-hello-title");
+      console.log(helloSpan.title); // new-hello-title
+
+      // another way to set
+      helloSpan.title = "new new title";
+      console.log(helloSpan.title); // new-new-title
+
+      // Removes title
+      helloSpan.removeAttribute("title");
+    </script>
+  </body>
+</html>
