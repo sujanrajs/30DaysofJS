@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <span id="hello">Hello</span>
+      <span id="world">World</span>
+    </div>
+    <script>
+      const body = document.body;
+      const div = document.createElement("div");
+      body.append(div);
+
+      // This prints <strong>Hello World</<strong> in browser
+      div.textContent = "<strong>Hello World</<strong>";
+
+      // This prints bold Strong Hello World in browser
+      div.innerHTML = "<strong>Strong Hello World</strong>";
+      // innerHTML renders HTML directly from JS but this comprimises security
+
+      // rather do like this
+      const newPara = document.createElement("p");
+      newPara.innerText = "Hello world paragraph";
+      body.append(newPara);
+
+      // Modifying
+      const newWorld = document.getElementById("hello");
+      newWorld.innerHTML = "HELLO"; // modify Hello to HELLO
+
+      const newHello = document.getElementById("world");
+      const newTag = document.createElement("p");
+      newTag.innerHTML = "new Tag Paragraph world";
+      newHello.replaceWith(newTag);
+    </script>
+  </body>
+</html>
